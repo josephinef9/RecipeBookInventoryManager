@@ -1,0 +1,6 @@
+<h1>List of Book Stores</h1>
+<ul>
+<% @book_stores.each do |book_store| %>
+  <li><%= link_to book_store.name, book_store_path(book_store) %></li>
+<% end %>
+</ul>

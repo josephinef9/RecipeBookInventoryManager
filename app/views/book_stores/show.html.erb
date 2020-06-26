@@ -1,0 +1,8 @@
+<h1>Information on <%= @book_store.name %></h1>
+<h3>Location: <%= @book_store.location %></h3>
+<h3>Recipe Books in Stock:</h3>
+<ul>
+<% @book_store.recipe_books.each do |recipe_book| %>
+  <li><%= recipe_book.name %> - </li>
+<% end %>
+</ul>
