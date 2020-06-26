@@ -31,10 +31,8 @@ ActiveRecord::Schema.define(version: 2020_06_26_143226) do
   create_table "recipe_books", force: :cascade do |t|
     t.string "name"
     t.string "author_name"
-    t.integer "book_store_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["book_store_id"], name: "index_recipe_books_on_book_store_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -47,7 +45,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_143226) do
   end
 
   create_table "stock_quantities", force: :cascade do |t|
-    t.integer "number_of_recipe_books"
+    t.integer "amount"
     t.integer "recipe_book_id"
     t.integer "book_store_id"
     t.float "cost"

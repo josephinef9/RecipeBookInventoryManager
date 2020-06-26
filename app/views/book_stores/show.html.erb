@@ -6,3 +6,6 @@
   <li><%= recipe_book.name %> - </li>
 <% end %>
 </ul>
+
+# recipe_book.stock_quatities.where(book_store: @book_store).sum(:amount)
+# recipe.overall_amount(book_store)

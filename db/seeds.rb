@@ -10,11 +10,11 @@ jo = Manager.create!(name: "Jo", password: "password", password_digest: "passwor
 worlds_best_book_store = BookStore.create!(name: "Worlds Best Book Store", location: "123 Easy Street", manager: jo)
 dev_book_store = BookStore.create!(name: "Dev Book Store", location: "123 State Street", manager: jo)
 
-cooking_lovers = RecipeBook.create!(name: "Cooking Lovers", author_name: "Jo", book_store: worlds_best_book_store)
-baking_genious =  RecipeBook.create!(name: "Baking Genious", author_name: "Cindy", book_store: worlds_best_book_store)
-feel_good_recipes =  RecipeBook.create!(name: "Feel Good Recipes", author_name: "Daphne", book_store: worlds_best_book_store)
-family_cooks =  RecipeBook.create!(name: "Family Cooks", author_name: "Henry", book_store: dev_book_store)
-quick_recipes =  RecipeBook.create!(name: "Quick Recipes", author_name: "Julie", book_store: dev_book_store)
+cooking_lovers = RecipeBook.create!(name: "Cooking Lovers", author_name: "Jo")
+baking_genious =  RecipeBook.create!(name: "Baking Genious", author_name: "Cindy")
+feel_good_recipes =  RecipeBook.create!(name: "Feel Good Recipes", author_name: "Daphne")
+family_cooks =  RecipeBook.create!(name: "Family Cooks", author_name: "Henry")
+quick_recipes =  RecipeBook.create!(name: "Quick Recipes", author_name: "Julie")
 
 
 blueberry_pie = Recipe.create!(name: "BlueBerry Pie", delicious_rating: 8, recipe_book: baking_genious)
@@ -28,11 +28,11 @@ fried_rice = Recipe.create!(name: "Fried Rice", delicious_rating: 8, recipe_book
 bbq_chicken = Recipe.create!(name: "BBQ Chicken", delicious_rating: 7, recipe_book: cooking_lovers)
 brownie = Recipe.create!(name: "Brownie", delicious_rating: 10, recipe_book: cooking_lovers)
 
-stock_quantity_1 = StockQuantity.create!(number_of_recipe_books: 5, cost: 25.00, book_store: worlds_best_book_store, recipe_book: cooking_lovers)
-stock_quantity_2 = StockQuantity.create!(number_of_recipe_books: 12, cost: 50.00, book_store: worlds_best_book_store, recipe_book: baking_genious)
-stock_quantity_3 = StockQuantity.create!(number_of_recipe_books: 7, cost: 35.50, book_store: worlds_best_book_store, recipe_book: feel_good_recipes)
-stock_quantity_4 = StockQuantity.create!(number_of_recipe_books: 7, cost: 35.50, book_store: dev_book_store, recipe_book: family_cooks)
-stock_quantity_5 = StockQuantity.create!(number_of_recipe_books: 7, cost: 35.50, book_store: dev_book_store, recipe_book: quick_recipes)
+stock_quantity_1 = StockQuantity.create!(amount: 5, cost: 25.00, book_store: worlds_best_book_store, recipe_book: cooking_lovers)
+stock_quantity_2 = StockQuantity.create!(amount: 12, cost: 50.00, book_store: worlds_best_book_store, recipe_book: baking_genious)
+stock_quantity_3 = StockQuantity.create!(amount: 7, cost: 35.50, book_store: worlds_best_book_store, recipe_book: feel_good_recipes)
+stock_quantity_4 = StockQuantity.create!(amount: 7, cost: 35.50, book_store: dev_book_store, recipe_book: family_cooks)
+stock_quantity_5 = StockQuantity.create!(amount: 7, cost: 35.50, book_store: dev_book_store, recipe_book: quick_recipes)
 
 
 

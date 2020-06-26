@@ -3,7 +3,6 @@ class CreateRecipeBooks < ActiveRecord::Migration[6.0]
     create_table :recipe_books do |t|
       t.string :name
       t.string :author_name
-      t.belongs_to :book_store
 
       t.timestamps
     end

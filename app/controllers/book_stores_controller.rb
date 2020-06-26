@@ -5,6 +5,6 @@ class BookStoresController < ApplicationController
 
   def show
     @book_store = BookStore.find(params[:id])
-    # binding.pry
+    binding.pry
   end
 end

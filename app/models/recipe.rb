@@ -1,4 +1,4 @@
 class Recipe < ActiveRecord::Base
   belongs_to :recipe_book
-  has_many :book_stores, through: :recipe_books
+  delegate :book_stores, to: :recipe_books
 end

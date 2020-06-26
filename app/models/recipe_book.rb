@@ -1,4 +1,5 @@
 class RecipeBook < ActiveRecord::Base
-  belongs_to :book_store
+  has_many :stock_quantities
+  has_many :book_stores, through: :stock_quantities
   has_many :recipes
 end
