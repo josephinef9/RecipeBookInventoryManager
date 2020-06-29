@@ -24,9 +24,4 @@ private
     params.require(:manager).permit(:name, :password)
   end
 
-  def require_login
-    if session[:user_id].nil?
-      redirect_to '/'
-    end
-  end
 end

@@ -1,0 +1,12 @@
+<h2>Stock Quantity of Recipe Books in <%= @book_store.name %></h2>
+
+<% @stock_quantities.each do |quantity| %>
+
+  <li>Recipe Book Name: <%= quantity.recipe_book.name %> - Quantity In Stock: <%= quantity.amount %> - <%= quantity.cost %></li>
+
+<% end %>
+</ul>
+
+<br>
+
+<%= link_to "Stock this Book Store", new_book_store_stock_quantity_path(@book_store.id) %>

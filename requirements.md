@@ -8,9 +8,9 @@ Requirements:
 - [x] Includes at least one belongs_to relationship (e.g. Post belongs_to User)
 - [x] Includes at least two has_many through relationships (e.g. a `Recipe` could `has_many` `Item`s through `Ingredient`s)
 - [x] Every model contains at least at least two simple attributes (e.g. ingredient#quantity)
-- [ ] Includes reasonable validations
+- [x] Includes reasonable validations
 - [ ] Includes a class level ActiveRecord scope method
-- [ ] Includes signup, login and logout functionality (e.g. Devise)
+- [x] Includes signup, login and logout functionality (e.g. Devise)
 - [x] Includes nested resource show or index (e.g. users/2/recipes)
 - [x] Includes nested resource form (recipes/1/ingredients/new)
 - [ ] Includes form display of validation errors

@@ -1,6 +1,0 @@
-<h2>Stock Quantity of Recipe Books in <%= @stock_quantity.book_store.name %></h2>
-
-<% @stock_quantity.book_store.recipe_books.each do |recipe_book| %>
-  <li>Recipe Book Name: <%= recipe_book.name %> - Quantity In Stock: <%= recipe_book.overall_amount(recipe_book) %></li>
-<% end %>
-</ul>

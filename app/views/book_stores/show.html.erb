@@ -7,11 +7,10 @@
 <% end %>
 </ul>
 
-<%= link_to "View Quantity of Recipe Books in Stock",  book_store_stock_quantity_path(@book_store.id, @book_store.stock_quantities.ids) %>
+<%= link_to "View Quantity of Recipe Books in Stock",  book_store_stock_quantities_path(@book_store.id) %>
 
 <h4>Navigation:</h4>
   <ul>
-    <li><%= link_to "Stock this Book Store", new_book_store_stock_quantity_path(@book_store.id) %></li>
     <li><%= link_to "Delete this Book Store", @book_store, method: :delete, data: { confirm: "Really?" } %></li>
     <li><%= link_to "Go Back to Book Stores list", book_stores_path %></li>
     <li><%= link_to "Go Back to Manager Home Page", manager_path(@manager) %>

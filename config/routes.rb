@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :recipe_books, only: [:index]
 
   resources :book_stores, only: [:new, :create, :show, :index, :destroy] do
-    resources :stock_quantities, only: [:new, :create, :show]
+    resources :stock_quantities, only: [:new, :create, :index]
   end
 
 
