@@ -1,4 +1,7 @@
 class ManagersController < ApplicationController
+  before_action :require_login
+  skip_before_action :require_login, only: [:new, :create]
+
   def new
     @manager = Manager.new
   end
@@ -16,7 +19,14 @@ class ManagersController < ApplicationController
   end
 
 private
+
   def user_params
     params.require(:manager).permit(:name, :password)
+  end
+
+  def require_login
+    if session[:user_id].nil?
+      redirect_to '/'
+    end
   end
 end

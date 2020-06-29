@@ -1,0 +1,9 @@
+<%= form_for([@book_store, @stock_quantity]) do |f| %>
+  <%= f.hidden_field :book_store_id %>
+  <%= f.collection_select :recipe_book_id, RecipeBook.all, :id, :name %><br>
+  <%= f.label :amount %>
+  <%= f.number_field :amount %><br>
+  <%= f.label :cost %>
+  <%= f.number_field :cost %><br>
+  <%= f.submit %>
+<% end %>
