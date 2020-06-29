@@ -1,0 +1,9 @@
+<h2>Create New Recipe Book</h2>
+
+<%= form_for(@recipe_book) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.label :author_name %>
+  <%= f.text_field :author_name %><br>
+  <%= f.submit %>
+<% end %>

@@ -2,17 +2,17 @@
 <h2>Location: <%= @book_store.location %></h2>
 <h3>Recipe Books in Stock:</h3>
 <ul>
-<% @book_store.recipe_books.each do |recipe_book| %>
-  <li>Name: <%= recipe_book.name %> - Author Name: <%= recipe_book.author_name %></li>
+<% @book_store.recipe_books.uniq.each do |recipe_book| %>
+  <li>Name: <%= recipe_book.name %> - Author Name: <%= recipe_book.author_name %> - Quantity In Stock: <%= recipe_book.overall_amount(recipe_book) %></li>
 <% end %>
 </ul>
 
-<%= link_to "View Quantity of Recipe Books in Stock",  book_store_stock_quantities_path(@book_store.id) %>
+<%= link_to "View Stock Quantity Information",  book_store_stock_quantities_path(@book_store.id) %>
 
 <h4>Navigation:</h4>
   <ul>
     <li><%= link_to "Delete this Book Store", @book_store, method: :delete, data: { confirm: "Really?" } %></li>
     <li><%= link_to "Go Back to Book Stores list", book_stores_path %></li>
-    <li><%= link_to "Go Back to Manager Home Page", manager_path(@manager) %>
+    <li><%= link_to "Go Back to Manager Home Page", manager_path(@manager) %></li>
     <li><%= link_to "Log Out", logout_path %></li>
   </ul>

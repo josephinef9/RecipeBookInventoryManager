@@ -3,6 +3,7 @@ class BookStoresController < ApplicationController
 
   def index
     @book_stores = BookStore.all
+    @manager = current_user
   end
 
   def show
@@ -17,8 +18,11 @@ class BookStoresController < ApplicationController
   def create
     @book_store = BookStore.new(book_store_params)
     @book_store.manager_id = current_user.id
-    @book_store.save
-    redirect_to book_stores_path
+    if @book_store.save
+      redirect_to book_stores_path
+    else
+      render :new
+    end
   end
 
   def destroy

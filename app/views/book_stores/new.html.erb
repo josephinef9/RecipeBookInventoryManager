@@ -4,5 +4,19 @@
   <%= f.text_field :name %><br>
   <%= f.label :location %>
   <%= f.text_field :location %><br>
+  <br>
+  <% if @book_store.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@book_store.errors.count, "error") %>
+      prohibited this book store from being saved:
+    </h2>
+    <ul>
+    <% @book_store.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
   <%= f.submit %>
 <% end %>
