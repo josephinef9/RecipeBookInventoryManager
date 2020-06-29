@@ -1,0 +1,11 @@
+<h1><%= @recipe_book.name %></h1>
+
+<h3>Recipes:</h3>
+<ul>
+<% @recipe_book.recipes.each do |recipe| %>
+  <li><%= recipe.name %></li>
+<% end %>
+</ul>
+<%= link_to "Go Back", recipe_books_path %>
+<br>
+<%= link_to "Delete this Recipe Book", @recipe_book, method: :delete, data: { confirm: "Really?" } %>

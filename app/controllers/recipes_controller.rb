@@ -3,5 +3,6 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
+    @manager = current_user
   end
 end

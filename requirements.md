@@ -13,7 +13,7 @@ Requirements:
 - [x] Includes signup, login and logout functionality (e.g. Devise)
 - [x] Includes nested resource show or index (e.g. users/2/recipes)
 - [x] Includes nested resource form (recipes/1/ingredients/new)
-- [ ] Includes form display of validation errors
+- [x] Includes form display of validation errors
 - [ ] Includes Unit tests all of your models
 - [ ] Includes at least one type of Integration test (e.g. controller, request, feature, system)
 - [ ] Use FactoryBot to build instances of your models in your tests

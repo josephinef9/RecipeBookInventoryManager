@@ -3,7 +3,7 @@
 <h3>Recipe Books in Stock:</h3>
 <ul>
 <% @book_store.recipe_books.uniq.each do |recipe_book| %>
-  <li>Name: <%= recipe_book.name %> - Author Name: <%= recipe_book.author_name %> - Quantity In Stock: <%= recipe_book.overall_amount(recipe_book) %></li>
+  <li>Name: <%= link_to recipe_book.name, recipe_book_path(recipe_book) %> - Author Name: <%= recipe_book.author_name %> - Quantity In Stock: <%= recipe_book.overall_amount(recipe_book) %></li>
 <% end %>
 </ul>
 

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :managers, only: [:new, :create, :show]
   resources :recipes, only: [:index]
-  resources :recipe_books, only: [:index, :new, :create]
+  resources :recipe_books, only: [:index, :new, :create, :show, :destroy]
 
   resources :book_stores, only: [:new, :create, :show, :index, :destroy] do
     resources :stock_quantities, only: [:new, :create, :index]

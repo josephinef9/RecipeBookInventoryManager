@@ -14,9 +14,11 @@ class StockQuantitiesController < ApplicationController
   def create
     @stock_quantity = StockQuantity.new(stock_quantity_params)
     @stock_quantity.book_store_id = params[:book_store_id]
-    # @stock_quantity.recipe_book_id = params[:stock_quantity][:recipe_book_id]
-    @stock_quantity.save
-    redirect_to book_store_stock_quantities_path(params[:book_store_id])
+    if @stock_quantity.save
+      redirect_to book_store_stock_quantities_path(params[:book_store_id])
+    else
+      render :new
+    end
   end
 
 private

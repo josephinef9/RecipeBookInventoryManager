@@ -1,9 +1,26 @@
-<h2>Create New Recipe Book</h2>
+<h2>Create a New Recipe Book</h2>
 
 <%= form_for(@recipe_book) do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %><br>
+  <%= f.text_field :name %><br><br>
   <%= f.label :author_name %>
-  <%= f.text_field :author_name %><br>
+  <%= f.text_field :author_name %><br><br>
+  Please Select a Recipe:
+  <%= f.collection_select :recipe_ids, Recipe.all, :id, :name %>
+    <br>
+  <% if @recipe_book.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@recipe_book.errors.count, "error") %>
+      prohibited this recipe book from being saved:
+    </h2>
+    <ul>
+    <% @recipe_book.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<br>
   <%= f.submit %>
 <% end %>
