@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_26_143226) do
+ActiveRecord::Schema.define(version: 2020_06_29_185916) do
 
   create_table "book_stores", force: :cascade do |t|
     t.string "name"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_143226) do
     t.integer "amount"
     t.integer "recipe_book_id"
     t.integer "book_store_id"
-    t.float "cost"
+    t.integer "cost"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_store_id"], name: "index_stock_quantities_on_book_store_id"
