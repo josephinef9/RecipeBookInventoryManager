@@ -5,8 +5,11 @@
   <%= f.text_field :name %><br><br>
   <%= f.label :author_name %>
   <%= f.text_field :author_name %><br><br>
-  Please Select a Recipe:
-  <%= f.collection_select :recipe_ids, Recipe.all, :id, :name %>
+  Please Select a Recipe: <br>
+    <% @recipes.each do |recipe| %>
+      <%= recipe.name %>
+      <input id="<%= recipe.name %>" type="checkbox" name="recipe_book[recipe_ids][]" value="<%= recipe.id %>">
+    <% end %>
     <br>
   <% if @recipe_book.errors.any? %>
   <div id="error_explanation">

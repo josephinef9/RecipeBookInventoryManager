@@ -13,10 +13,12 @@ class RecipeBooksController < ApplicationController
 
   def new
     @recipe_book = RecipeBook.new
+    @recipes = Recipe.all
   end
 
   def create
     recipe_book = RecipeBook.new(recipe_book_params)
+    recipe_book.recipe_ids = params[:recipe_book][:recipe_ids]
     if recipe_book.save
       redirect_to recipe_books_path
     else
