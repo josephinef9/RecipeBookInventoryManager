@@ -5,6 +5,11 @@
 <% end %>
 </ul>
 
+<h3>Recipes With a Delicious Rating Over 7</h3>
+  <% @recipes_ratings.each do |recipe| %>
+    <%= recipe.name %><br>
+  <% end %>
+
 <br>
 <%= link_to "Go Back to Manager Home Page", manager_path(@manager) %>
 <br>
