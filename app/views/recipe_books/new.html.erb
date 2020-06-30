@@ -8,7 +8,7 @@
   Please Select a Recipe: <br>
     <% @recipes.each do |recipe| %>
       <%= recipe.name %>
-      <input id="<%= recipe.name %>" type="checkbox" name="recipe_book[recipe_ids][]" value="<%= recipe.id %>">
+      <input id="<%= recipe.name %>" type="checkbox" name="recipe_book[recipe_ids][]" value="<%= recipe.id %>"><br>
     <% end %>
     <br>
   <% if @recipe_book.errors.any? %>
