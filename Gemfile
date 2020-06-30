@@ -7,6 +7,8 @@ gem "bcrypt"
 
 gem "factory_bot_rails"
 
+gem "rails-controller-testing"
+
 gem "pry"
 
 gem "rubocop"

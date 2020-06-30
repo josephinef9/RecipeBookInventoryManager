@@ -4,12 +4,15 @@ class SessionsController < ApplicationController
   end
 
   def create
-    manager = Manager.find_by(name: params[:manager][:name])
-    authenticated = manager.authenticate(params[:password])
-    if authenticated
-      session[:user_id] = manager.id
+    if (@manager = Manager.find_by(name: params[:manager][:name]))
+      authenticated = @manager.authenticate(params[:manager][:password])
+      if authenticated
+        session[:user_id] = @manager.id
 
-      redirect_to user_path(manager)
+        redirect_to manager_path(@manager)
+      else
+        redirect_to signin_path
+      end
     else
       redirect_to root_path
     end
