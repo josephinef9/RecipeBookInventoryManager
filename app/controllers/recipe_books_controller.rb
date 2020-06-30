@@ -8,7 +8,6 @@ class RecipeBooksController < ApplicationController
 
   def show
     @recipe_book = RecipeBook.find(params[:id])
-    # binding.pry
   end
 
   def new

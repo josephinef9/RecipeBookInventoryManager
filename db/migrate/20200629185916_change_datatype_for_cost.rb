@@ -4,6 +4,7 @@ class ChangeDatatypeForCost < ActiveRecord::Migration[6.0]
       t.change :cost, :integer
     end
   end
+
   def self.down
     change_table :stock_quantities do |t|
       t.change :cost, :float

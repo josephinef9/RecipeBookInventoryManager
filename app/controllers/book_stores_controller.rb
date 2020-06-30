@@ -35,5 +35,4 @@ private
   def book_store_params
     params.require(:book_store).permit(:name, :location)
   end
-
 end

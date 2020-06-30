@@ -6,7 +6,7 @@ class RecipeBook < ActiveRecord::Base
   validates :name, presence: true
   validates :author_name, presence: true
 
-  def overall_amount(recipe_book)
+  def overall_amount(_recipe_book)
     stock_quantities.sum(:amount)
   end
 end
