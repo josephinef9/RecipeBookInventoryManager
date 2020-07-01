@@ -2,10 +2,9 @@
 
 <% @stock_quantities.each do |quantity| %>
 
-  <li>Recipe Book Name: <%= quantity.recipe_book.name %> - Quantity Bought: <%= quantity.amount %> - Cost: $<%= quantity.cost %></li>
+  Recipe Book Name: <%= quantity.recipe_book.name %> - Quantity Bought: <%= quantity.amount %> - Cost: $<%= quantity.cost %><br>
 
 <% end %>
-</ul>
 
 <br>
 
