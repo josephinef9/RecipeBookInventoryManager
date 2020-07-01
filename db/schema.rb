@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_29_185916) do
+ActiveRecord::Schema.define(version: 2020_07_01_171913) do
 
   create_table "book_stores", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 2020_06_29_185916) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["manager_id"], name: "index_book_stores_on_manager_id"
+  end
+
+  create_table "instructions", force: :cascade do |t|
+    t.integer "recipe_id"
+    t.integer "recipe_book_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["recipe_book_id"], name: "index_instructions_on_recipe_book_id"
+    t.index ["recipe_id"], name: "index_instructions_on_recipe_id"
   end
 
   create_table "managers", force: :cascade do |t|
@@ -38,10 +47,8 @@ ActiveRecord::Schema.define(version: 2020_06_29_185916) do
   create_table "recipes", force: :cascade do |t|
     t.string "name"
     t.integer "delicious_rating"
-    t.integer "recipe_book_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["recipe_book_id"], name: "index_recipes_on_recipe_book_id"
   end
 
   create_table "stock_quantities", force: :cascade do |t|
