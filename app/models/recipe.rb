@@ -1,5 +1,6 @@
 class Recipe < ActiveRecord::Base
-  belongs_to :recipe_book
+  has_many :instructions
+  has_many :recipe_books, through: :instructions
   delegate :book_stores, to: :recipe_books
 
   scope :rating, -> { where("delicious_rating > 7") }
