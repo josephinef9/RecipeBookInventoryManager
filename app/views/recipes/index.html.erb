@@ -1,9 +1,9 @@
 <h1>List of Recipes</h1>
-<ul>
+
 <% @recipes.each do |recipe| %>
-  <li><%= recipe.name %></li>
+  <%= recipe.name %><br>
 <% end %>
-</ul>
+
 
 <h3>Recipes With a Delicious Rating Over 7</h3>
   <% @recipes_ratings.each do |recipe| %>

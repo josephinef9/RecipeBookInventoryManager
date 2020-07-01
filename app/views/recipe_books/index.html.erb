@@ -1,9 +1,9 @@
 <h1>List of Recipe Books</h1>
-<ul>
+
 <% @recipe_books.each do |recipe_book| %>
-  <li><%= link_to recipe_book.name, recipe_book_path(recipe_book) %></li>
+  <%= link_to recipe_book.name, recipe_book_path(recipe_book) %><br>
 <% end %>
-</ul>
+
 
 <br>
 <%= link_to "Create New Recipe Book", new_recipe_book_path %>
