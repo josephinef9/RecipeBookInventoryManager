@@ -1,24 +1,10 @@
-# README
+# Recipe Book nventory Manager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Instructions
+- Fork and clone the repo
+- Run `bundle install`
+- Make sure to run `rails db:migrate` and `rails db:seed`
+- Start your server by running `rails s`
 
-Things you may want to cover:
+## Overview
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
