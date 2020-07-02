@@ -10,7 +10,11 @@
       <%= recipe.name %>
       <input id="<%= recipe.name %>" type="checkbox" name="recipe_book[recipe_ids][]" value="<%= recipe.id %>"><br>
     <% end %>
-    <br>
+<br>
+  <%= f.submit %>
+<% end %>
+
+ <br>
   <% if @recipe_book.errors.any? %>
   <div id="error_explanation">
     <h2>
@@ -23,7 +27,4 @@
     <% end %>
     </ul>
   </div>
-<% end %>
-<br>
-  <%= f.submit %>
 <% end %>
