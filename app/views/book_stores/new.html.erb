@@ -11,12 +11,10 @@
       <%= pluralize(@book_store.errors.count, "error") %>
       prohibited this book store from being saved:
     </h2>
-    <ul>
     <% @book_store.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+      <%= msg %><br>
     <% end %>
-    </ul>
   </div>
-<% end %>
+<% end %><br>
   <%= f.submit %>
 <% end %>
