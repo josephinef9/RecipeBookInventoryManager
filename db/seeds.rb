@@ -27,8 +27,8 @@ Recipe.create!(name: "Fried Rice", delicious_rating: 8, recipe_books: [family_co
 Recipe.create!(name: "BBQ Chicken", delicious_rating: 7, recipe_books: [cooking_lovers])
 Recipe.create!(name: "Brownie", delicious_rating: 10, recipe_books: [cooking_lovers])
 
-StockQuantity.create!(amount: 5, cost: 25, book_store: worlds_best_book_store, recipe_book: cooking_lovers)
-StockQuantity.create!(amount: 12, cost: 50, book_store: worlds_best_book_store, recipe_book: baking_genious)
-StockQuantity.create!(amount: 7, cost: 35, book_store: worlds_best_book_store, recipe_book: feel_good_recipes)
-StockQuantity.create!(amount: 7, cost: 35, book_store: dev_book_store, recipe_book: family_cooks)
-StockQuantity.create!(amount: 7, cost: 35, book_store: dev_book_store, recipe_book: quick_recipes)
+StockQuantity.create!(amount: 0, cost: 25, book_store: worlds_best_book_store, recipe_book: cooking_lovers)
+StockQuantity.create!(amount: 0, cost: 50, book_store: worlds_best_book_store, recipe_book: baking_genious)
+StockQuantity.create!(amount: 0, cost: 35, book_store: worlds_best_book_store, recipe_book: feel_good_recipes)
+StockQuantity.create!(amount: 0, cost: 35, book_store: dev_book_store, recipe_book: family_cooks)
+StockQuantity.create!(amount: 0, cost: 35, book_store: dev_book_store, recipe_book: quick_recipes)

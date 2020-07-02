@@ -1,18 +1,17 @@
 require 'rails_helper'
 
-# describe BookStore do
-#   before(:each) do
-#     jo = Manager.create!(name: "Jo", password: "password", password_digest: "password")
-#     @book_store = BookStore.create!(name: "Book Store", location: "123 Easy st", manager: jo)
-#   end
-
-#   it 'can be created' do
-#     expect(@book_store).to be_valid
-#   end
-# end
-
 RSpec.describe BookStore, type: :model do
-  it "is valid" do
+  describe "is not valid" do
+    it "without a name" do
+      expect(build :book_store, name: nil).to be_invalid
+    end
+
+    it "without a location" do
+      expect(build :book_store, location: nil).to be_invalid
+    end
+  end
+
+  it "has a valid factory" do
     expect(build :book_store).to be_valid
   end
 end

@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <div>
+      <% if flash[:messages] %>
+        <% flash[:messages].each do |message| %>
+          <strong><h4><%= message%></h4></strong>
+        <% end %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
